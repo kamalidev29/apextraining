@@ -2,9 +2,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 app = FastAPI()
+#Welcome
 
-
-@app.get("/home")
+@app.get("/home_items")
 def read_root():
     return {"Hello": "World"}
 
