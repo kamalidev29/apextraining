@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bank Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Bank Management System
+        </div>
+
+        <div>
+
+            <span id="welcomeUser"></span>
+
+            <button
+                class="logout-btn"
+                onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="dashboard-container">
+
+        <h1 id="dashboardTitle">
+            Dashboard
+        </h1>
+
+
+        <!-- ========================= -->
+        <!-- ADMIN DASHBOARD -->
+        <!-- ========================= -->
+
+        <div
+            id="adminDashboard"
+            class="dashboard-section"
+        >
+
+            <h2>Admin Dashboard</h2>
+
+            <div class="card-grid">
+
+                <div class="action-card">
+
+                    <h3>Create Customer</h3>
+
+                    <p>Create a new customer account.</p>
+
+                    <button onclick="showCreateCustomer()">
+                        Create Account
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <h3>View All Customers</h3>
+
+                    <p>View all customer accounts.</p>
+
+                    <button onclick="getAllCustomers()">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <h3>View Customer</h3>
+
+                    <p>Search customer using ID.</p>
+
+                    <button onclick="showViewCustomer()">
+                        View Account
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <h3>Delete Customer</h3>
+
+                    <p>Delete an existing customer account.</p>
+
+                    <button onclick="showDeleteCustomer()">
+                        Delete Account
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- CUSTOMER DASHBOARD -->
+        <!-- ========================= -->
+
+        <div
+            id="customerDashboard"
+            class="dashboard-section"
+        >
+
+            <h2>Customer Dashboard</h2>
+
+            <div class="card-grid">
+
+                <div class="action-card">
+
+                    <h3>My Account</h3>
+
+                    <p>View your account details.</p>
+
+                    <button onclick="viewMyAccount()">
+                        View Account
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <h3>Deposit Money</h3>
+
+                    <p>Add money to your account.</p>
+
+                    <button onclick="showDeposit()">
+                        Deposit
+                    </button>
+
+                </div>
+
+
+                <div class="action-card">
+
+                    <h3>Withdraw Money</h3>
+
+                    <p>Withdraw money from your account.</p>
+
+                    <button onclick="showWithdraw()">
+                        Withdraw
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- OPERATION AREA -->
+        <!-- ========================= -->
+
+        <div
+            id="operationArea"
+            class="operation-area"
+        >
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- RESULT AREA -->
+        <!-- ========================= -->
+
+        <div
+            id="resultArea"
+            class="result-area"
+        >
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

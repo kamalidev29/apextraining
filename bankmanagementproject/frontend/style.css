@@ -1,0 +1,578 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* PROFESSIONAL BANK BACKGROUND */
+    background-image:
+        linear-gradient(
+            rgba(8, 35, 70, 0.30),
+            rgba(8, 35, 70, 0.30)
+        ),
+        url("image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.login-card {
+    width: 400px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* LOGIN TITLE */
+
+.login-card h1 {
+    text-align: center;
+
+    color: #123f78;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+    text-align: center;
+
+    color: #55708f;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   ROLE BUTTONS
+========================================================= */
+
+.role-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.role-btn {
+    width: 50%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd6e2;
+
+    background: #eef3f8;
+
+    color: #315579;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.role-btn:hover {
+    background: #dfeaf5;
+}
+
+
+.role-btn.active {
+    background: #14539a;
+
+    color: white;
+
+    border-color: #14539a;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+========================================================= */
+
+.login-card label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    color: #243b53;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.login-card input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cbd6e2;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    transition: 0.2s;
+}
+
+
+.login-card input:focus {
+    border-color: #14539a;
+
+    box-shadow:
+        0 0 0 2px rgba(20, 83, 154, 0.12);
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-btn {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #14539a;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.login-btn:hover {
+    background: #0d3d76;
+
+    transform: translateY(-1px);
+}
+
+
+/* LOGIN MESSAGE */
+
+#loginMessage {
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: red;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    background: #123f78;
+
+    color: white;
+
+    padding: 18px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.logout-btn {
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-left: 15px;
+}
+
+
+.logout-btn:hover {
+    background: #b02a37;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard-container {
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+}
+
+
+.dashboard-container h1 {
+    margin-bottom: 25px;
+
+    color: #123f78;
+}
+
+
+.dashboard-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+
+.action-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #edf0f4;
+}
+
+
+.action-card h3 {
+    color: #123f78;
+
+    margin-bottom: 10px;
+}
+
+
+.action-card p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+.action-card button {
+    background: #14539a;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.action-card button:hover {
+    background: #0d3d76;
+}
+
+
+/* =========================================================
+   OPERATION AREA
+   HIDDEN INITIALLY
+========================================================= */
+
+.operation-area {
+    display: none;
+
+    background: white;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #edf0f4;
+}
+
+
+.operation-area h3 {
+    color: #123f78;
+
+    margin-bottom: 20px;
+}
+
+
+.operation-area input {
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 11px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    display: block;
+}
+
+
+.operation-area button {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #14539a;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.operation-area button:hover {
+    background: #0d3d76;
+}
+
+
+/* =========================================================
+   RESULT AREA
+   HIDDEN INITIALLY
+========================================================= */
+
+.result-area {
+    display: none;
+
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    overflow-x: auto;
+
+    border: 1px solid #edf0f4;
+}
+
+
+/* =========================================================
+   CUSTOMER TABLE
+========================================================= */
+
+.customer-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+}
+
+
+.customer-table th,
+.customer-table td {
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    text-align: left;
+}
+
+
+.customer-table th {
+    background: #123f78;
+
+    color: white;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.success {
+    color: green;
+
+    font-weight: bold;
+}
+
+
+.error {
+    color: red;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ACCOUNT BOX
+========================================================= */
+
+.account-box {
+    background: #f8f9fa;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .login-container {
+        background-position: center;
+    }
+
+    .login-card {
+        width: 90%;
+
+        max-width: 400px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .login-card {
+        width: 92%;
+
+        padding: 25px;
+    }
+
+
+    .login-card h1 {
+        font-size: 24px;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .dashboard-container {
+        width: 95%;
+    }
+
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}

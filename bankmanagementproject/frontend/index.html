@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1>Bank Management System</h1>
+
+            <p class="subtitle">Secure Banking Portal</p>
+
+            <!-- ROLE SELECTION -->
+
+            <div class="role-buttons">
+
+                <button
+                    id="adminRoleBtn"
+                    class="role-btn active"
+                    onclick="selectRole('admin')">
+                    Admin
+                </button>
+
+                <button
+                    id="customerRoleBtn"
+                    class="role-btn"
+                    onclick="selectRole('customer')">
+                    Customer
+                </button>
+
+            </div>
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm">
+
+                <label for="name">Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
